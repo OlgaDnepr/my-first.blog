@@ -26,5 +26,13 @@
                 <h2><a href="http://tutorial.djangogirls.org/ru/deploy/index.html">Repositories</a></h2>
                 <p>Repositories in GitHub and PythonAnywhere were add and clone.</p>
             </div>
+ {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
+    {% endfor %}
+
 </body>
 </html>
